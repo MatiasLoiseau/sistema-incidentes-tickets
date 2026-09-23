@@ -79,6 +79,7 @@ function fila(inc) {
       </td>
       <td>${fecha(inc.creado)}</td>
       <td>${tiempo(inc)}</td>
+      <td><button type="button" class="eliminar" data-id="${inc.id}">Eliminar</button></td>
     </tr>`;
 }
 
@@ -142,6 +143,17 @@ lista.addEventListener('change', e => {
     inc.resuelto = terminado ? inc.resuelto || Date.now() : null;
   }
 
+  guardar();
+  mostrar();
+});
+
+// Eliminar un incidente
+lista.addEventListener('click', e => {
+  if (!e.target.matches('.eliminar')) return;
+  if (!confirm('¿Eliminar este incidente?')) return;
+
+  const id = Number(e.target.dataset.id);
+  incidentes = incidentes.filter(i => i.id !== id);
   guardar();
   mostrar();
 });

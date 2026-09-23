@@ -14,6 +14,7 @@ Aplicación web simple para gestionar incidentes TIC. Está hecha solo con HTML,
   - Si se reabre, el tiempo vuelve a correr desde la creación.
 - Muestra un resumen con la cantidad de incidentes por estado y el tiempo promedio de resolución.
 - Permite filtrar por estado, prioridad y responsable.
+- Permite eliminar incidentes. Antes de borrar pide confirmación.
 
 ## Cómo usarla
 

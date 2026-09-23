@@ -134,7 +134,7 @@ button:hover {
 
 table {
   width: 100%;
-  min-width: 760px;
+  min-width: 840px;
   border-collapse: collapse;
   font-size: 0.9rem;
 }
@@ -159,6 +159,17 @@ td small {
 
 td select {
   padding: 4px 6px;
+}
+
+.eliminar {
+  padding: 4px 8px;
+  color: #b42318;
+  background: transparent;
+  border: 1px solid #f1b8b3;
+}
+
+.eliminar:hover {
+  background: #fdd8d6;
 }
 
 .vacio {
