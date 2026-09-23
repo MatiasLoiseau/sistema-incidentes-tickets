@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Incidentes TIC</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Incidentes TIC</h1>
+  </header>
+
+  <main>
+    <section id="resumen" class="resumen"></section>
+
+    <section class="panel">
+      <h2>Nuevo incidente</h2>
+      <form id="form-incidente">
+        <label>
+          Título
+          <input name="titulo" required>
+        </label>
+        <label>
+          Descripción
+          <textarea name="descripcion" rows="3"></textarea>
+        </label>
+        <div class="grupo">
+          <label>
+            Prioridad
+            <select name="prioridad"></select>
+          </label>
+          <label>
+            Responsable
+            <select name="responsable"></select>
+          </label>
+        </div>
+        <button type="submit">Registrar incidente</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Incidentes</h2>
+      <div id="filtros" class="grupo filtros">
+        <label>
+          Estado
+          <select id="filtro-estado"></select>
+        </label>
+        <label>
+          Prioridad
+          <select id="filtro-prioridad"></select>
+        </label>
+        <label>
+          Responsable
+          <select id="filtro-responsable"></select>
+        </label>
+      </div>
+
+      <div class="tabla-contenedor">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Incidente</th>
+              <th>Prioridad</th>
+              <th>Responsable</th>
+              <th>Estado</th>
+              <th>Creado</th>
+              <th>Tiempo</th>
+            </tr>
+          </thead>
+          <tbody id="lista"></tbody>
+        </table>
+      </div>
+      <p id="vacio" class="vacio">No hay incidentes para mostrar.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

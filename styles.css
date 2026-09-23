@@ -1,0 +1,179 @@
+:root {
+  --fondo: #f4f5f7;
+  --panel: #ffffff;
+  --texto: #1f2933;
+  --suave: #616e7c;
+  --borde: #d9dde3;
+  --acento: #2563eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+}
+
+header {
+  background: var(--texto);
+  color: #fff;
+  padding: 16px 0;
+}
+
+header h1 {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+  font-size: 1.4rem;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+  display: grid;
+  gap: 16px;
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+/* Resumen */
+.resumen {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.tarjeta {
+  background: var(--panel);
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  padding: 12px;
+  color: var(--suave);
+  font-size: 0.9rem;
+}
+
+.tarjeta span {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--texto);
+}
+
+/* Formulario y filtros */
+form {
+  display: grid;
+  gap: 12px;
+}
+
+label {
+  display: grid;
+  gap: 4px;
+  font-size: 0.9rem;
+  color: var(--suave);
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+  color: var(--texto);
+  background: #fff;
+  padding: 8px;
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.grupo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.filtros {
+  margin-bottom: 12px;
+}
+
+button {
+  justify-self: start;
+  font: inherit;
+  color: #fff;
+  background: var(--acento);
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+/* Tabla */
+.tabla-contenedor {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th,
+td {
+  text-align: left;
+  vertical-align: top;
+  padding: 8px;
+  border-bottom: 1px solid var(--borde);
+}
+
+th {
+  color: var(--suave);
+  font-weight: 600;
+}
+
+td small {
+  display: block;
+  color: var(--suave);
+}
+
+td select {
+  padding: 4px 6px;
+}
+
+.vacio {
+  color: var(--suave);
+  text-align: center;
+}
+
+/* Colores por prioridad */
+[data-prioridad="Baja"]    { background: #eef1f4; }
+[data-prioridad="Media"]   { background: #fff7d6; }
+[data-prioridad="Alta"]    { background: #ffe4c7; }
+[data-prioridad="Crítica"] { background: #fdd8d6; font-weight: 700; }
+
+/* Colores por estado */
+[data-estado="Abierto"]     { background: #dde9fd; }
+[data-estado="En progreso"] { background: #ece3fc; }
+[data-estado="Resuelto"]    { background: #dcf3e3; }
+[data-estado="Cerrado"]     { background: #eef1f4; }
